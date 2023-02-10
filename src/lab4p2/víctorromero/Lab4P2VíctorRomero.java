@@ -13,23 +13,27 @@ public class Lab4P2VíctorRomero {
         System.out.println("Victor Romero - 12211079\n");
 
         int[][] numeros = new int[8][8];
-        int[][] numero = lectura(8, 8);
+        Object[][] numero = lectura(8, 8);
 
         imprimir(numero);
     }
 
-    public static int[][] lectura(int fila, int columna) {
-        int[][] temporal = new int[fila][columna];
+    public static Object[][] lectura(int fila, int columna) {
+        Object[][] temporal = new Object[fila][columna];
 
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                temporal[i][j] = 0;
+                if(temporal[i][j] == null){
+                   temporal[i][j] = " ";
+                } else{
+                    System.out.println("["+ temporal[i][j]);
+                }
             }
         }
         return temporal;
     }
 
-    public static void imprimir(int[][] numero) {
+    public static void imprimir(Object[][] numero) {
         String cadena = "";
         System.out.println("  A   B   C   D   E   F   G   H ");
         for (int i = 0; i < numero.length; i++) {
@@ -38,7 +42,7 @@ public class Lab4P2VíctorRomero {
                 System.out.print("[" + " " + "]" + " ");
             }
             System.out.println(" ");
-            
+
         }
     }
 }

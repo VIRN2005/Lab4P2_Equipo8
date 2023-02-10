@@ -13,21 +13,26 @@ public class Lab4P2VíctorRomero {
         System.out.println("Victor Romero - 12211079\n");
 
         int[][] numeros = new int[8][8];
-        Object[][] numero = lectura(8, 8);
+        Object[][] numero = llenarMatriz(8, 8);
 
         imprimir(numero);
     }
 
-    public static Object[][] lectura(int fila, int columna) {
-        Object[][] temporal = new Object[fila][columna];
+    public static Pieza[][] llenarMatriz(int fila, int columna) {
+        Pieza[][] temporal = new Pieza[fila][columna];
 
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                if(temporal[i][j] == null){
-                   temporal[i][j] = " ";
-                } else{
-                    System.out.println("["+ temporal[i][j].getNombre()+"]");
+                if (temporal[i][j] == null) {
+                } else {
+                    if (temporal[i][j] instanceof Dama) {
+
+                    }
+                    
+
+                    System.out.println("[" + ((Pieza) temporal[i][j]).getNombre() + "]");
                 }
+
             }
         }
         return temporal;

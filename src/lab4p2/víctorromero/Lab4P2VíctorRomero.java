@@ -15,7 +15,7 @@ public class Lab4P2VíctorRomero {
         int[][] numeros = new int[8][8];
         int[][] numero = lectura(8, 8);
 
-        System.out.println(imprimir(numero));
+        imprimir(numero);
     }
 
     public static int[][] lectura(int fila, int columna) {
@@ -29,19 +29,16 @@ public class Lab4P2VíctorRomero {
         return temporal;
     }
 
-    public static String imprimir(int[][] numero) {
+    public static void imprimir(int[][] numero) {
         String cadena = "";
         System.out.println("  A   B   C   D   E   F   G   H ");
         for (int i = 0; i < numero.length; i++) {
-//            System.out.println(i);
+            System.out.print(i + 1);
             for (int j = 0; j < numero[i].length; j++) {
-                cadena += "[" + " " + "]" + " ";
+                System.out.print("[" + " " + "]" + " ");
             }
-
-            System.out.println(i + 1);
-            cadena += "\n";
+            System.out.println(" ");
+            
         }
-
-        return cadena;
     }
 }

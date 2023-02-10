@@ -26,7 +26,7 @@ public class Lab4P2VíctorRomero {
                 if(temporal[i][j] == null){
                    temporal[i][j] = " ";
                 } else{
-                    System.out.println("["+ temporal[i][j]);
+                    System.out.println("["+ temporal[i][j].getNombre()+"]");
                 }
             }
         }
